@@ -17,7 +17,9 @@ namespace TicTacToeProgram
             Console.WriteLine("Welcome to the tic toe program");
 
             //Calling the tictactoegame start fresh method
-            TicTacToeGame.StartFresh();
+            TicTacToeGame.StartFresh();           
+            //Calling the get player input method
+            TicTacToeGame.GetPlayerInput();
             Console.ReadLine();
         }
     }
