@@ -43,6 +43,11 @@ namespace TicTacToeProgram
             {
                 computer = 'X';
             }
+            else
+            {
+                Console.WriteLine("Wrong Input Try Again");
+                GetPlayerInput();
+            }
             Console.WriteLine("Player Chose : " + player);
             Console.WriteLine("Computer Chose : " + computer);
         }
