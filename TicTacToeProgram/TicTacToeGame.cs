@@ -12,11 +12,11 @@ namespace TicTacToeProgram
     public class TicTacToeGame
     {
         // static variables
-        public static char[] playBoard;
+        public static char[] playBoard = new char[10];
         public static char player;
         public static char computer;
 
-        //Method for player to start fresh by resetting the board
+        //Method for player to start fresh by resetting the board(UC1)
         public static void StartFresh()
         {
             Console.WriteLine("==================");
@@ -24,13 +24,16 @@ namespace TicTacToeProgram
             Console.WriteLine("|| Game Started ||");
             Console.WriteLine("||              ||");
             Console.WriteLine("==================");
-            playBoard = new char[10] {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
-            //To ignore first index
-            playBoard = playBoard.Skip(1).ToArray();
+            //To ignore first index i is initialized as 1
+            for (int i = 1; i < playBoard.Length; i++)
+            {
+                playBoard[i] = ' ';
+            }
             Console.ReadLine();
         }
 
+        //Method to get the player and computer input(UC2)
         public static void GetPlayerInput()
         {
             Console.Write("Choose What Symbol You Want \"X\" or \"O\" : ");
