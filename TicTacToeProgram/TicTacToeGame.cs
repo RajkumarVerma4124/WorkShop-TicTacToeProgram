@@ -22,7 +22,9 @@ namespace TicTacToeProgram
             Console.WriteLine("|| Game Started ||");
             Console.WriteLine("||              ||");
             Console.WriteLine("==================");
-            playBoard = new char[] { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+            playBoard = new char[10] {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+            //To ignore first index
+            playBoard = playBoard.Skip(1).ToArray();
             Console.ReadLine();
         }
     }
